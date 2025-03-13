@@ -48,7 +48,7 @@ fun main() {
     var meuJogo: Jogo? = null
 
     val resultado = runCatching {
-        //A variável "meuInfoJogo" precisa estar dentro do escopo runCatching visto que ele pode gerar a exceção.
+        //A variável "meuInfoJogo" precisa estar dentro do escopo runCatching, visto que ele pode gerar a exceção.
         // Caso ela esteja fora do deste escopo, o erro não será tratado e, como consequência, vai cair no mesmo erro de antes.
         val meuInfoJogo = gson.fromJson(json, InfoJogo::class.java)
         meuJogo = Jogo(

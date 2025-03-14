@@ -17,12 +17,12 @@ fun main() {
     var meuJogo: Jogo? = null
 
     val resultado = runCatching {
-        val InformacaoJogo = buscaApi.buscaJogo(busca)
+        val informacaoJogo = buscaApi.buscaJogo(busca)
         //A variável "meuInfoJogo" precisa estar dentro do escopo runCatching, visto que ele pode gerar a exceção.
         // Caso ela esteja fora deste escopo, o erro não será tratado e, como consequência, vai cair no mesmo erro de antes.
         meuJogo = Jogo(
-            InformacaoJogo.info.title,
-            InformacaoJogo.info.thumb
+            informacaoJogo.info.title,
+            informacaoJogo.info.thumb
         )
     }
 
